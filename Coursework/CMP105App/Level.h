@@ -2,6 +2,7 @@
 
 #include "Framework/BaseLevel.h"
 #include "Framework/GameObject.h"
+#include "Sheep.h"
 
 class Level : BaseLevel {
 public:
@@ -11,6 +12,8 @@ public:
 	void handleInput(float dt) override;
 	void update(float dt);
 	void render();
+
+
 
 private:
 	// Default functions for rendering to the screen.
@@ -25,5 +28,12 @@ private:
 
 	const float INPUT_BUFFER_LENGTH = 0.1f;
 	const float APPROX_ONE_OVER_ROOT_TWO = 0.70710678f;	// 1 / sqrt(2)
+
+	sf::RectangleShape m_sheep;
+	sf::Texture m_sheepTexture;
+
+	
+	
+	
 
 };
